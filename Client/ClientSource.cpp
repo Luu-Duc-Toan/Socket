@@ -11,7 +11,7 @@ int main() {
 		cin >> input;
 		if (input == ' ') break;
 		if (input == 's') {
-			client.Send("Hello Server");
+			client.Send("1");
 		}
 		client.Receive();
 	}

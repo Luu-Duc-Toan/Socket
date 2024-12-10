@@ -56,7 +56,7 @@ struct ClientSocket {
 			closesocket(clientSocket);
 			WSACleanup();
 		}
-		freeaddrinfo(serverAddr); //No longer needed
+		if(serverAddr) freeaddrinfo(serverAddr);
 	}
 	void Send(const char* message) {
 		send(clientSocket, message, strlen(message), 0);

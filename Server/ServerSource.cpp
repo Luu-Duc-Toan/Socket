@@ -2,7 +2,7 @@
 
 int main() {
 	WSADATA wsaData;
-	InitWinsock(wsaData); //Initialize Winsock
+	InitWinsock(wsaData); 
 	
 	ServerSocket server;
 
@@ -13,6 +13,7 @@ int main() {
 		server.Receive();
 		char input = 'o';
 		cin >> input;
+		cout << input;
 		if (input == ' ') break;
 		if (input == 's') {
 			server.Send(welcomeMessage);
@@ -21,4 +22,5 @@ int main() {
 
 	server.Close();
 	CloseWinsock();
+	return 0;
 }
